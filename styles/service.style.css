@@ -1,0 +1,273 @@
+.medsection{
+  margin-top: 4rem;
+}
+
+.icons a svg {
+  height: 2.5rem;
+  width: 2.5rem;
+  text-align: center;
+}
+
+.icons a svg:hover {
+  transform: rotate(360deg);
+  transition: 0.5s;
+
+}
+
+.icons a svg path:hover {
+  fill: hsl(var(--clr-prime));
+}
+
+.icons a {
+  padding-inline: 1rem;
+}
+
+.icons h1 {
+  text-align: center;
+  padding-bottom: 2rem;
+}
+
+.animated {
+  animation: up-down 2s ease-in-out infinite alternate-reverse both;
+}
+
+@-webkit-keyframes up-down {
+  0% {
+    transform: translateY(15px);
+  }
+
+  100% {
+    transform: translateY(-90px);
+  }
+}
+
+@keyframes up-down {
+  0% {
+    transform: translateY(10px);
+  }
+
+  100% {
+    transform: translateY(-10px);
+  }
+}
+
+
+::-webkit-scrollbar {
+  width: 0.5rem;
+
+}
+
+::-webkit-scrollbar-track {
+  background-color: #1B212C;
+
+}
+
+::-webkit-scrollbar-thumb {
+  background-color: hsl(var(--clr-light));
+  border-radius: 2px;
+  /* border: 1px solid #F54B4B; */
+  /* box-shadow: inset 0 0 6px yellow; */
+}
+
+footer {
+  padding-top: 1.5rem;
+  display: flex;
+  flex-direction: row;
+  padding-bottom: 2.5rem;
+  justify-content: space-evenly;
+  align-items: center;
+
+}
+
+.foot2 {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  text-align: center;
+  width: 30%;
+}
+
+.foot2 p {
+  padding-top: 0.4rem;
+  padding-left: 1.5rem;
+}
+
+footer ul {
+  list-style: none;
+}
+
+footer ul li {
+  margin-bottom: 1rem;
+  color: hsl(var(--clr-white));
+}
+
+.svgg {
+  transform: translateY(30px);
+}
+
+
+footer ul li:hover {
+  color: hsl(var(--clr-light));
+}
+
+footer p {
+  width: 75%;
+  color: hsl(var(--clr-white));
+  font-weight: 10;
+
+}
+
+.intro-img {
+  width: 300px;
+  height: 300px;
+}
+
+.intro-img img {
+  object-fit: cover;
+}
+
+.links {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+  gap: 1rem;
+}
+
+.links a {
+  color: var(--clr-white);
+  text-decoration: none;
+  text-transform: uppercase;
+}
+
+.links a:hover{
+  color: rgb(247, 34, 10);
+}
+
+.contact {
+  display: flex;
+  flex-direction: column;
+  justify-content: center;
+  align-items: center;
+}
+
+.contact_item {
+  display: flex;
+  flex-direction: row;
+  flex-wrap: nowrap;
+  justify-content: center;
+  align-items: center;
+  gap: 0.5rem;
+}
+
+/*--------------------------------------*/
+
+@media(max-width: 680px) {
+  footer {
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    padding-inline: 1rem;
+    gap: var(--gap, 0.4rem);
+    align-items: center;
+  }
+
+  footer ul li::before {
+    display: inline-block;
+    font-weight: 400;
+    text-align: center;
+    content: "1";
+    width: 1rem;
+    height: 1rem;
+    background-color: hsl(var(--clr-prime));
+    color: hsl(var(--clr-white));
+    -ms-transform: rotateX(180deg);
+    transform: rotateX(180deg);
+  }
+
+  .foot2 {
+    width: 100%;
+    text-align: center;
+  }
+
+  footer p {
+
+    text-align: justify;
+  }
+
+  .anime {
+    text-align: center;
+  }
+
+  .anime svg {
+    padding-inline: 0;
+    width: 15rem;
+    height: 15rem;
+    padding-bottom: 0.5rem;
+  }
+
+  .icons {
+    width: 100%;
+    text-align: center;
+    font-size: 0.75rem;
+  }
+
+  .icons a svg {
+    height: 1.75rem;
+    width: 1.75rem;
+  }
+
+  #es {
+    display: none;
+  }
+
+  .contact p {
+    width: 100%;
+  }
+}
+
+/* ************************************************ */
+.word {
+  color: hsl(var(--clr-white));
+  font-size: 0.8rem;
+  padding-bottom: 0.5rem;
+}
+
+/*********************************************************************/
+.anime svg {
+  height: 30vh;
+
+}
+
+.anime .path {
+  animation: draw 2.5s infinite;
+  animation-timing-function: linear;
+}
+
+@keyframes draw {
+  0% {}
+
+  100% {
+    stroke-dashoffset: 0;
+    stroke-opacity: 1;
+  }
+}
+
+#svgGroup {
+  transform: translate(33%, 33%);
+}
+
+/*---------------------------------------------------*/
+
+.grid-containermed {
+  display: grid;
+  grid-template-columns: 3rem 1fr;
+}
+
+@media(max-width: 780px) {
+  .grid-containermed {
+    grid-template-columns: 1fr;
+    gap: 1rem;
+  }
+
+}
