@@ -1,13 +1,14 @@
 .welcome{
   position: absolute;
-  top:0;
+  top:4rem;
   width: 100vw;
   z-index: -10;
   overflow-x: hidden;
 }
 
 #welcome-video{
-  height: 100vh;
+  height: calc(100vh - 4rem);
+  object-fit: cover;
 }
 .fill-container{
   position: relative;

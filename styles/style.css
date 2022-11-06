@@ -28,10 +28,10 @@
 
 @media (min-width: 35em) {
   :root {
-    --fs-800: 5rem;
-    --fs-700: 2.5rem;
-    --fs-600: 1.5rem;
-    --fs-400: 1rem;
+    --fs-800: 4.8rem;
+    --fs-700: 2rem;
+    --fs-600: 1rem;
+    --fs-400: 0.8rem;
   }
 }
 
@@ -277,12 +277,15 @@ a {
 /* system design calsses  */
 .navBar-container {
   width: 100%;
-  z-index: 99;
+  z-index: 100;
+  background-color: var(--clr-darker) !important;
+  opacity: 1 !important;
 }
 
 .navBar-container.fixed {
   position: fixed;
-  background-color: var(--clr-darker);
+  background-color: var(--clr-darker) !important;
+  opacity: 1 !important;
   top: 0 !important;
   left: 0 !important;
   box-shadow: #000 1px 1px 6px;
